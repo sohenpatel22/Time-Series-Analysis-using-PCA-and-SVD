@@ -132,6 +132,22 @@ The project includes:
 
 ---
 
+## Results
+
+## Key Results
+
+### Climate Data – Scree Plot
+![Climate Scree](outputs/plots/climate_scree.png)
+
+Only 3 components explain ~99.9% variance, indicating strong global structure.
+
+### Ozone Data – RMSE Comparison
+![Ozone RMSE](outputs/plots/ozone_pca_vs_svd_rmse.png)
+
+Ozone data requires significantly more components, showing weaker shared structure.
+
+---
+
 ## Tech Stack
 
 * Python
@@ -163,8 +179,8 @@ python src/run_ozone_analysis.py
 
 ```
 ├── data/
-│   ├── raw/
-│   └── processed/
+│   ├── processed/
+│   └── README.md
 ├── notebooks/
 ├── src/
 │   ├── load_data.py
