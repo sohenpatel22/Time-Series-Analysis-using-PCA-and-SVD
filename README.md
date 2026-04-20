@@ -31,13 +31,13 @@ The goal is to study how much information can be retained using fewer components
 
 * Source: Berkeley Earth
 * Features: Yearly average temperature per country
-* Shape: ~234 countries × 112 years
+* Shape: ~234 countries * 112 years
 
 ### 2. Ozone Air Pollution Dataset
 
 * Source: Canadian monitoring stations
 * Features: Annual ozone levels per station
-* Shape: 18 stations × 28 years
+* Shape: 18 stations * 28 years
 
 ---
 
@@ -46,8 +46,8 @@ The goal is to study how much information can be retained using fewer components
 ### Data Processing
 
 * Converted raw data into **time-series matrix format**
-  * Rows → Countries / Stations
-  * Columns → Years
+  * Rows -> Countries / Stations
+  * Columns -> Years
 * Removed missing values and ensured consistent time ranges
 * Standardized features using `StandardScaler`
 
@@ -128,8 +128,8 @@ The project includes:
 
 ```bash
 # Clone repository
-git clone <your-repo-link>
-cd <repo-name>
+git clone https://github.com/sohenpatel22/Time-Series-Analysis-using-PCA-and-SVD.git
+cd Time-Series-Analysis-using-PCA-and-SVD
 
 # Install dependencies
 pip install -r requirements.txt
@@ -195,8 +195,4 @@ This project shows that:
 ## Author
 
 Sohen Azizuddin Patel
-
-```
-
----
 
