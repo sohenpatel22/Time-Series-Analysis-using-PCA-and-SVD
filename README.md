@@ -46,7 +46,6 @@ The goal is to study how much information can be retained using fewer components
 ### Data Processing
 
 * Converted raw data into **time-series matrix format**
-
   * Rows → Countries / Stations
   * Columns → Years
 * Removed missing values and ensured consistent time ranges
@@ -67,14 +66,12 @@ The goal is to study how much information can be retained using fewer components
 ### Reconstruction
 
 * Reconstructed time series using incremental components:
-
   * PC1
   * PC1–PC2
   * PC1–PC4
   * PC1–PC8
   * PC1–PC16
 * Evaluated reconstruction quality using:
-
   * Residual error plots
   * Root Mean Square Error (RMSE)
 
@@ -83,56 +80,13 @@ The goal is to study how much information can be retained using fewer components
 ### SVD Comparison
 
 * Applied SVD in two ways:
-
   * On standardized data
   * On original (non-standardized) data
 * Compared results against PCA:
-
   * Residual error
   * RMSE vs number of components
 
 ---
-
-## Key Results
-
-### Climate Dataset
-
-* Only **3 principal components** capture **~99.9% variance**
-* Indicates strong global structure (global warming trend)
-* First component captures long-term upward temperature trend
-* Later components represent noise or minor variations
-
----
-
-### Ozone Dataset
-
-* Requires **~15 components** for 99.9% variance
-* Indicates **less shared structure across stations**
-* Higher variability and localized behavior compared to temperature data
-
----
-
-### PCA vs SVD
-
-* PCA ≈ SVD (on standardized data) → identical results
-* SVD on raw data performs worse due to scale differences
-* Highlights importance of **feature scaling** in dimensionality reduction
-
----
-
-## Visualizations
-
-The project includes:
-
-* Scree plots (variance explained)
-* Principal component time-series
-* Reconstruction curves
-* Residual error plots
-* RMSE vs number of components
-
----
-
-## Results
 
 ## Key Results
 
@@ -145,6 +99,18 @@ Only 3 components explain ~99.9% variance, indicating strong global structure.
 ![Ozone RMSE](outputs/plots/ozone_pca_vs_svd_rmse.png)
 
 Ozone data requires significantly more components, showing weaker shared structure.
+
+---
+
+## Visualizations
+
+The project includes:
+
+* Scree plots (variance explained)
+* Principal component time-series
+* Reconstruction curves
+* Residual error plots
+* RMSE vs number of components
 
 ---
 
@@ -180,6 +146,8 @@ python src/run_ozone_analysis.py
 ```
 ├── data/
 │   ├── processed/
+│   │   ├── climate_yearly.csv
+│   │   └── ozone_yearly.csv
 │   └── README.md
 ├── notebooks/
 ├── src/
@@ -191,6 +159,7 @@ python src/run_ozone_analysis.py
 │   ├── run_climate_analysis.py
 │   └── run_ozone_analysis.py
 ├── outputs/
+│   └── plots/
 ├── requirements.txt
 └── README.md
 ```
@@ -227,4 +196,7 @@ This project shows that:
 
 Sohen Azizuddin Patel
 
+```
+
 ---
+
